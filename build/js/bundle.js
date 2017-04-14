@@ -70,12 +70,19 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(2);
+"use strict";
 
-document.write("Welcome to Big Hair Concerts!");
+
+var _login = __webpack_require__(2);
+
+console.log('Login from app'); //require('./login');
+
+
+(0, _login.login)('admin', 'radical');
+
+document.write("Welcome to Big Hair Concerts!!");
 
 console.log('App loaded');
-
 
 /***/ }),
 /* 1 */
@@ -83,6 +90,7 @@ console.log('App loaded');
 
 //this is global JS provided to all apps.
 console.log('loggin from the utils.js file...');
+debugger;
 
 
 /***/ }),
@@ -92,13 +100,17 @@ console.log('loggin from the utils.js file...');
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 var login = function login(username, password) {
     if (username !== 'admin' || password !== 'radical') {
         console.log('incorrect login');
     }
 };
 
-login('admin', 'idunno');
+//login('admin', 'idunno');
+exports.login = login;
 
 /***/ }),
 /* 3 */
