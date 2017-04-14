@@ -1,0 +1,24 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "w",
+  "author": "Marek Kacprzak",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "jshint": "^2.9.4",
+    "jshint-loader": "^0.8.4",
+    "node-libs-browser": "^2.0.0",
+    "strip-loader": "^0.1.2",
+    "webpack": "^2.3.3"
+  },
+  "scripts": {
+    "start": "webpack-dev-server",
+    "startProd":"webpack --config webpack-production.config.js -p"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
