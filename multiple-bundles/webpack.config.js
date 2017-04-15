@@ -1,7 +1,8 @@
 var path = require('path');
 var webpack = require('webpack');
 
-var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('shared.js');
+//var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('shared.js');
+var commonsPlugin = new webpack.optimize.CommonsChunkPlugin({ name: 'shared' });
 
 module.exports = {
 	context: path.resolve('js'),
@@ -11,12 +12,13 @@ module.exports = {
 		contact: './contact_page.js'
 	},
 	output: {
-		path: path.resolve('build/js/'),
+		path: path.resolve(__dirname,'build/js/'),
 		publicPath: '/public/assets/js/',
 		filename: "[name].js"
 	},
 
-	plugins: [commonsPlugin],
+	plugins: [commonsPlugin ],
+	
 	devServer: {
 		contentBase: 'public'
 	},
@@ -31,7 +33,5 @@ module.exports = {
 		]
 	},
 
-	resolve: {
-		extensions: ['', '.js', '.es6']
-	}
+	resolve: { extensions: ['.js', '.es6'] }
 }

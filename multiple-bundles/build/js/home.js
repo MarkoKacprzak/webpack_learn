@@ -1,10 +1,12 @@
-webpackJsonp([2,3],[
-/* 0 */
+webpackJsonp([0],{
+
+/***/ 2:
 /***/ (function(module, exports) {
 
-	console.log('Home page JS loaded');
+console.log('Home page JS loaded');
 
 
 
 /***/ })
-]);
+
+},[2]);
